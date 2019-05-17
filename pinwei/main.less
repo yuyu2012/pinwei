@@ -1,0 +1,304 @@
+// 通用部分
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+p{
+    margin: 0;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+input, textarea, button, div {-webkit-tap-highlight-color: rgba(0,0,0,0);}
+*:focus{ 
+    outline: none;
+}
+
+.container {
+    background-size: 100% auto;
+    width: 1024px;
+    margin: auto;
+    font-family: "微软雅黑";
+}
+
+.fixedtop-tel{
+    display: none;
+}
+
+
+
+.link-div{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    background: #353535;
+    font-size: 14px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        color: #f6f6f6;
+        .link{      
+            a{
+                color: #f6f6f6;
+                font-weight: bold;
+                padding-right: 35px;
+            }
+        }
+    }  
+}
+
+.fixedtop{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+
+}
+
+.banner{
+    width: 100%;
+    height: 413px;
+    background:url(./banner.jpg) center;
+    
+}
+
+.logo-mob,.banner-mob,.environment-mob-div{
+    display: none;
+}
+
+.menu-div{
+    margin: 70px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        .pic{
+            width: 58%;
+            img{
+                border:solid 1px #ddd;
+                margin-right: 2px;
+                margin-bottom: 2px;
+            }
+        }
+        .menu{
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .title{
+                color: #3f3d3e;
+                font-size: 38PX;
+                font-weight: bolder;
+                letter-spacing: 7px;
+            }
+            .english{
+                line-height: 24px;
+                color: #555;
+            }
+            .chinese{
+                background: #cdae82;
+                color: #fff9eb;
+                width: 355px;
+                height: 99px;
+                writing-mode: vertical-rl;
+                writing-mode: tb-rl;
+                padding: 10px 25px;
+                line-height: 24px;
+                text-align: start;
+            }
+            a{
+                color: #cdae82;
+                text-decoration: underline;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+            
+        }
+    }
+    
+}
+
+.environment-div{
+    margin-bottom: 40px;
+    .environment{
+        display: flex;
+    }
+    .black{
+        position: relative;
+        top:-111px;
+        ul{
+            font-size: 14px;
+            position: absolute;
+            color: #fbe6b9;
+            background: rgba(0, 0, 0, 0.50);
+            padding:20px 15px;
+            .title{
+                font-size: 16px;
+                padding-bottom: 8px;
+            }
+        }
+    }
+    .white{
+        font-size: 12px;
+        color:#838383;
+        height: 67px;
+        padding: 0 15px; 
+        .title{
+            color: #1a1a1a;
+            font-size:14px;
+            padding-top: 5px;
+        }
+    }
+}
+
+.bottom{
+    background: #f5f5f5;
+    width: 100%;
+    text-align: center;
+    padding: 60px 0;
+    font-size: 13px;
+    color: #818181;
+    ul{
+        margin-top: 5px;
+    }
+    li{
+        line-height: 28px;
+        b{
+            color: #5f5f5f;
+            font-weight: normal;
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .container {
+        width: 100%;
+    }
+    .logo,.tel,.banner,.menu-div .pic,.environment-div,{
+        display: none;
+    }
+    .fixedtop-tel{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        span{
+            font-weight: bold;
+            flex: 1;
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+    .logo-mob{
+        display: block;
+    }
+    .bottom{
+        b{
+            display: block;
+        }
+    }
+    .environment-mob-div{
+        display: block;
+        margin-bottom: 20px;
+        .swiper-slide{
+            background-position: center;
+            background-size: cover;
+            width: 265px;
+            height: 318px;
+            display: flex;
+            align-items: flex-end;
+            ul{
+                font-size: 12px;
+                color: #fbe6b9;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 20px 15px;
+                width: calc(100% - 30px);
+                .title{
+                    font-size: 14px;
+                }
+            }
+        }
+        .sli1{
+            background-image: url(./environment-mob1.jpg)
+        }
+        .sli2{
+            background-image: url(./environment-mob2.jpg)
+        }
+        .sli3{
+            background-image: url(./environment-mob3.jpg)
+        }
+    }
+    .menu-div{
+        margin: 30px 0;
+        .container{
+            .menu{
+                .title{
+                    font-size: 30px;
+                }
+                .english{
+                    width: 95%;
+                    margin: 10px 0;
+                }
+                .chinese{
+                    width: 80%;
+                    height: 126px;
+                    padding: 10px 10px;
+                }
+                a{
+                    padding: 12px;
+                }
+            } 
+        } 
+    }
+    .link-div{
+        .container{
+            .link{
+                flex: 1;
+                display: flex;
+                justify-content: space-around;
+                a{
+                    padding: 0;
+                }
+            }
+        }
+    } 
+    .banner-mob{
+        display: block;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+        ul{
+            background: #0000007a;
+            position: absolute;
+            top: -66px;
+            width: calc(100% - 30px );
+            color: #fff;
+            padding: 10px 15px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    #fixedtop .link{
+        display: none;
+    }
+    
+}
+
+.absoult{
+    position: absolute;
+    width: 100%;
+}
