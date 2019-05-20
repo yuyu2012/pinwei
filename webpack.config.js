@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin'); //引入
 
 module.exports = {
     entry: {
-        index: "./message_openApp/index.js"
+        index: "./pinwei/index.js"
     },
 
     optimization: {
@@ -81,18 +81,18 @@ module.exports = {
 
     plugins: [ // 对应的插件
 
-        // new HtmlWebpackPlugin({ //配置
-        //     filename: 'index.html', //输出文件名
-        //     template: './pinwei/index.html', //以当前目录下的index.html文件为模板生成dist/index.html文件
-        // }),
-        // new HtmlWebpackPlugin({ //配置
-        //     filename: 'menu.html', //输出文件名
-        //     template: './pinwei/menu.html', //以当前目录下的index.html文件为模板生成dist/index.html文件
-        // }),
-        // new HtmlWebpackPlugin({ //配置
-        //     filename: 'contact.html', //输出文件名
-        //     template: './pinwei/contact.html', //以当前目录下的index.html文件为模板生成dist/index.html文件
-        // }),
+        new HtmlWebpackPlugin({ //配置
+            filename: 'index.html', //输出文件名
+            template: './pinwei/index.html', //以当前目录下的index.html文件为模板生成dist/index.html文件
+        }),
+        new HtmlWebpackPlugin({ //配置
+            filename: 'menu.html', //输出文件名
+            template: './pinwei/menu.html', //以当前目录下的index.html文件为模板生成dist/index.html文件
+        }),
+        new HtmlWebpackPlugin({ //配置
+            filename: 'contact.html', //输出文件名
+            template: './pinwei/contact.html', //以当前目录下的index.html文件为模板生成dist/index.html文件
+        }),
 
         // new HtmlWebpackPlugin({ //配置
         //     filename: 'index.html', //输出文件名
@@ -114,10 +114,10 @@ module.exports = {
         //     template: './message_openApp/index.html',
         // }),
 
-        new HtmlWebpackPlugin({ //配置
-            filename: 'index.html', //输出文件名
-            template: './message_openApp/index.html',
-        }),
+        // new HtmlWebpackPlugin({ //配置
+        //     filename: 'index.html', //输出文件名
+        //     template: './message_openApp/index.html',
+        // }),
 
 
         new CleanWebpackPlugin(['dist']), //传入数组,指定要删除的目录

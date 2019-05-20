@@ -36,7 +36,7 @@
     "countup.js": "^1.9.3",
     "jquery": "^3.3.1",
     "jquery-lazyload": "^1.9.7",
-    "lazyload": "^2.0.0-beta.2",
+    "lazyload": "^2.0.0-rc.2",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "shake.js": "^1.2.2",
